@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+  <title>Form</title>
+</head>
+
+<body>
+  <header>
+    <h3 style="text-align: center; text-decoration: underline; margin-top: 10px;">Register Here</h3>
+  </header>
+  <section>
+    <div class="container">
+      <form action="Welcome" method="post" name="myForm" onsubmit="return validateform()" onsubmit="return matchpass()">
+        <div class="Box rounded border">
+          <h2 class="ms-4 mt-3">Create Account</h2>
+          <div class="mb-3 mt-3 ms-4 me-4">
+            <label for="name" class="form-label font-weight-normal">Enter Your Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Your Name" name="name">
+          </div>
+          <div class="mb-3 mt-3 ms-4 me-4">
+            <label for="mobilenumber" class="form-label font-weight-normal">Enter Your Mobile Number</label>
+            <input type="number" class="form-control" id="number" placeholder="Enter Your Mobile Number" name="number">
+          </div>
+          <div class="mb-3 mt-3 ms-4 me-4">
+            <label for="email" class="form-label font-weight-normal">Enter Your e-Mail </label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Your email" name="email">
+          </div>
+          <div class="mb-3 mt-3 ms-4 me-4">
+            <label for="password" class="form-label font-weight-normal">Password </label>
+            <input type="password" class="form-control" id="password" placeholder="Create Your Password"
+              name="password">
+          </div>
+          <div class="col-auto mb-3 mt-3 ms-4 me-4">
+            <span id="passwordHelpInline" class="form-text">
+              <em style="color: rgb(22, 155, 207);"><b>i</b></em> Passwords must be at least 6 characters
+            </span>
+          </div>
+          <div class="mb-3 mt-3 ms-4 me-4">
+            <label for="passwordagain" class="form-label font-weight-normal">Password Again </label>
+            <input type="password" class="form-control" id="passwordagain" placeholder="Enter Password Again"
+              name="passwordagain">
+          </div>
+          <fieldset class="col-auto mb-3 mt-3 ms-4 me-4">
+            <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="female" id="female" value="Female">
+                <label class="form-check-label" for="female">
+                  Female
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="male" id="male" value="Male">
+                <label class="form-check-label" for="male">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="other" id="other" value="Other">
+                <label class="form-check-label" for="other">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <div class="d-grid gap-2 mb-3 mt-3 ms-4 me-4">
+            <input type="submit" class="btn btn-warning" value="Submit Button">
+          </div>
+          <div class="ms-3 text-muted">
+            <p>By creating an account or logging in, you agree to <a href="#">Term's and Conditions</a> of Use and <a
+                href="#">Privacy Policy</a>.</p>
+          </div>
+          <hr class="dotted">
+          <div class="ms-3">
+            <p>Already have an account? <a href="#">Sign in</a><br>
+              Buying for work? <a href="#">Create a free business account</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="page-footer font-small mt-3">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3"> <span style="color: black;">© 2021 Copyright:</span>
+      <a href="#"> Mastek.com</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <!--form validation-->
+  <script>
+    function validateform() {
+      var name = document.myForm.name.value;
+      var password = document.myForm.password.value;
+      var passwordagain = document.myForm.passwordagain.value;
+
+      if (name == null || name == "") {
+        alert("Name can't be blank");
+        return false;
+      } else if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      else if (password == passwordagain) {
+        return true;
+      } else {
+        alert("Password must be same !");
+        return false;
+      }
+    }
+  </script>
+  <!--form validation terminates here-->
+</body>
+
+</html>
