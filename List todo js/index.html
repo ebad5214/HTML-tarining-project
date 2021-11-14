@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <!--Link Bootstrap CDN-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h2 style="text-align: center;">
+          <i><b>To Do List</b></i>
+        </h2>
+      </header>
+      <div id="myDIV" class="header">
+        <h3>My To Do List</h3>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter Here..." aria-label="Recipient's username" aria-describedby="button-addon2" id="myInput">
+            <button class="btn btn-warning" type="button" id="button-addon2" onclick="newElement()">Add</button>
+        </div>
+         
+      <ul id="myUL">
+        <li>2 Dozen Banana</li>
+        <li>1kg Apple</li>
+        <li>Dhaniya</li>
+        <li>Pudina</li>
+        <li>1/2 kg Tamatar</li>
+        <li>5kg Aloo</li>
+      </ul>
+    </div>
+    <script src="app.js"></script>
+    <script src="server.js"></script>
+  </body>
+</html>
