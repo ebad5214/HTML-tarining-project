@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Link Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Link Knockout CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js" integrity="sha512-2AL/VEauKkZqQU9BHgnv48OhXcJPx9vdzxN1JrKDVc4FPU/MEE/BZ6d9l0mP7VmvLsjtYwqiYQpDskK9dG8KBA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Link CSS-->
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <label class="text-center fs-1 "><strong>Add Your Task</strong> </label>
+    <form data-bind="submit:addItem" style="padding-bottom: 5px;">
+         <input type="text" style="padding-bottom: 5px; margin-bottom: 5px;" data-bind='value:itemToAdd, valueUpdate: "afterkeydown"'  class="form-control"/>
+        <button type="submit" class="btn btn-success  btn-lg" data-bind="enable: itemToAdd().length > 0">Add</button>
+    </form>
+     
+    <p class="text-center fs-3">Your Tasks:</p>
+    <select class="form-select form-select-lg mb-3" multiple="multiple" height="5" data-bind="options:allItems, selectedOptions:selectedItems" style="margin-bottom: 10px;"> </select>
+     
+    <div>
+        <button class="btn btn-outline-danger" style="margin-right: 5px;" data-bind="click: removeSelected, enable: selectedItems().length > 0">Remove</button>
+        <button class="btn btn-outline-info" style="margin-right: 5px;" data-bind="click: sortItems, enable: allItems().length > 1">Sort</button>
+    </div>
+</div>
+</div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
