@@ -1,0 +1,170 @@
+body{
+  background-color: rgba(225, 237, 238, 0.74);
+}
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+/**CSS For Grid**/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    margin-top: 20px;
+    grid-auto-rows: 200px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    align-items: center;
+  }
+
+  /**styling for image of iron man**/
+  #identity{
+      overflow: auto;
+      margin-top: 10px;
+  }
+  #mark1{
+      float: left;
+      padding: 0px 20px 20px 20px;
+  }
+
+  
+  /**styling Background Image**/
+  .box{
+      border: black 2px solid;
+      margin-top: 10px;
+  }
+  #background{
+    background-image: url('/img/backimg.jpg');
+    background-repeat:no-repeat;
+    height: 350px;
+    padding-top: 50px;
+    color: #fff;
+  }
+
+  #content{
+      background-color: black;
+      opacity: 0.9;
+      max-width: 450px;
+      padding: 30px 20px;
+      margin-top: 50px;
+      margin-left: 430px;
+      text-align: center;
+      font-weight: 500;
+      
+  }
+  /**Styling List**/
+  .list{
+      border: 1px solid black;
+      margin-top: 5px;
+      padding: 20px;
+  }
+
+  #left{
+      float: left;
+  }
+
+  #right{
+      float: right;
+  }
+  /**Box1style**/
+  #box1{
+    border: 1px solid #ccc;
+    padding-bottom: 12px ;
+    background-color: white;
+  }
+  #box2{
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+  #box3{
+    border: 1px solid #ccc;
+    margin-top: -20px;
+    background-color: white;
+   
+  }
+
+  .avatar {
+    vertical-align: middle;
+    border: 1px solid #d0d0d0;
+    height: 110px;
+    width: 110px;
+    border-radius:50%;
+    padding: 5px;
+    background-color: white;
+  }
+  .region
+  {margin-top:60px;display:inline-grid;min-height:525px;}
+
+  #foot{
+     background-color: rgba(0, 0, 0, 0.658);
+  }
+
+  #box4{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box5{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box6{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box7{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box8{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box9{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box10{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+  #box11{
+    border: 2px solid #cccccc;
+    background-color: white;
+  }
+#b{
+  background-color: black;
+  color: white;
+}
